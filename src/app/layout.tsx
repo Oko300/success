@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Model Context Protocol",
     "AI tools",
     "Python",
-    "Full-stack",
+    "Full-stack Dev",
     "Statistics",
     "success",
     "Oko300",
