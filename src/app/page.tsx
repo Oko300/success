@@ -55,8 +55,16 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-          <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
-            success
+          <a href="#" className="flex items-center gap-2.5 group">
+            <Image
+              src="/logo2.jpg"
+              alt="success"
+              width={32}
+              height={32}
+              className="rounded-sm object-cover"
+              priority
+            />
+            <span className="text-lg font-semibold tracking-tight text-foreground">success</span>
           </a>
           <div className="hidden items-center gap-8 text-sm text-muted md:flex">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
@@ -225,18 +233,22 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight text-foreground mb-12">
               What I work with
             </h2>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {skills.map((group) => (
+            <div className="space-y-10">
+              {skills.map((group, i) => (
                 <div
                   key={group.category}
-                  className="rounded-2xl border border-border bg-surface p-6"
+                  className={`flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10${
+                    i > 0 ? " pt-10 border-t border-border/30" : ""
+                  }`}
                 >
-                  <h3 className="font-semibold text-foreground mb-4">{group.category}</h3>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-accent sm:w-48 shrink-0 pt-0.5">
+                    {group.category}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((item) => (
                       <span
                         key={item}
-                        className="rounded-md bg-background border border-border px-3 py-1.5 text-sm text-muted"
+                        className="rounded-full border border-border/60 px-3.5 py-1 text-sm text-foreground/80"
                       >
                         {item}
                       </span>

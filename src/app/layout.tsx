@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     "Oko300",
   ],
   authors: [{ name: "success" }],
+  icons: {
+    icon: "/logo2.jpg",
+    apple: "/logo2.jpg",
+    shortcut: "/logo2.jpg",
+  },
   openGraph: {
     title: "success | MCP Tools & Software",
     description:

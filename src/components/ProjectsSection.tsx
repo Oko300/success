@@ -110,8 +110,8 @@ const projects: Project[] = [
         type: "features",
         heading: "Two focused tools",
         items: [
-          "analyze_8k_events — scans material events, restatements, leadership changes, and asset impairments from Form 8-K filings",
-          "analyze_insider_activity — detects clustered selling vs routine transactions from Form 4 insider filings",
+          "8-K Event Scanner: reads material events, restatements, leadership changes, and asset impairments from Form 8-K filings",
+          "Insider Activity Tool: detects clustered selling versus routine transactions from Form 4 insider filings",
           "Built-in risk taxonomy that classifies every event into a severity tier",
           "Clustering pattern detection across multiple filings",
           "Plain-language explanation attached to every scored assessment",
