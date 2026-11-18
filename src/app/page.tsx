@@ -105,8 +105,8 @@ export default function Home() {
                 </h1>
                 <p className="max-w-xl text-lg text-muted leading-relaxed">
                   Full-stack developer focused on building practical AI tools and MCP servers.
-                  I design and ship production software — from web and mobile applications to
-                  developer tools that integrate directly with AI assistants.
+                  I design and ship production software: web apps, mobile apps, developer tools,
+                  and AI integrations built for real use.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <a
@@ -153,9 +153,9 @@ export default function Home() {
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
                   I build full-stack applications, developer tools, and AI integrations.
-                  My current focus is on Model Context Protocol (MCP) servers — tools that
-                  give AI assistants structured, real-world capabilities such as file system
-                  access, data analysis, and workflow automation.
+                  My current focus is on Model Context Protocol (MCP) servers, giving AI assistants
+                  structured, real-world capabilities including file system access, data analysis,
+                  and workflow automation.
                 </p>
                 <p>
                   I work across the stack: TypeScript and Next.js on the frontend, Node.js
@@ -166,7 +166,7 @@ export default function Home() {
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
                   In addition to product work, I have experience managing Web3 and NFT
-                  communities — handling Discord moderation, collaboration coordination,
+                  communities, handling Discord moderation, collaboration coordination,
                   and day-to-day community operations under real pressure.
                 </p>
                 <p>
@@ -195,7 +195,7 @@ export default function Home() {
                 {
                   icon: Sparkles,
                   title: "Identify",
-                  text: "I focus on real gaps — missing tooling, awkward workflows, or data that is hard to access — and design practical solutions around them.",
+                  text: "I focus on real gaps: missing tooling, awkward workflows, or data that is hard to access. Every solution is designed around the actual problem.",
                 },
                 {
                   icon: Code2,
@@ -233,34 +233,20 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight text-foreground mb-12">
               What I work with
             </h2>
-            <div className="space-y-10">
-              {skills.map((group, i) => (
-                <div
-                  key={group.category}
-                  className={`flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10${
-                    i > 0 ? " pt-10 border-t border-border/30" : ""
-                  }`}
-                >
-                  <p className="text-xs font-semibold uppercase tracking-widest text-accent sm:w-48 shrink-0 pt-0.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border/50 rounded-2xl overflow-hidden">
+              {skills.map((group) => (
+                <div key={group.category} className="bg-background px-8 py-8">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent mb-3">
                     {group.category}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-border/60 px-3.5 py-1 text-sm text-foreground/80"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sm text-foreground/60 leading-relaxed">
+                    {group.items.join(" · ")}
+                  </p>
                 </div>
               ))}
             </div>
             <p className="mt-8 text-sm text-muted max-w-2xl">
-              I also build websites and applications for small businesses and personal brands —
-              landing pages, web apps, and mobile-friendly experiences — as well as VS Code
-              extensions and custom MCP tools.
+              I also build websites and applications for small businesses and personal brands: landing pages, web apps, and mobile-friendly experiences, as well as VS Code extensions and custom MCP tools.
             </p>
           </div>
         </section>
@@ -274,8 +260,7 @@ export default function Home() {
             </h2>
             <p className="max-w-2xl text-muted mb-8 leading-relaxed">
               My primary focus is building MCP servers and AI tooling that give assistants
-              real capabilities — file access, data pipelines, risk analysis, and developer
-              workflows — while continuing to ship full-stack applications and community tools.
+              real capabilities including file access, data pipelines, risk analysis, and developer workflows, while continuing to ship full-stack applications and community tools.
             </p>
             <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
               <p className="text-muted leading-relaxed">
@@ -296,7 +281,7 @@ export default function Home() {
             </h2>
             <p className="mx-auto max-w-lg text-muted mb-10 leading-relaxed">
               Available for internships, freelance projects, and collaborations.
-              If you need someone who can design, build, and ship — reach out.
+              If you need someone who can design, build, and ship, reach out.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

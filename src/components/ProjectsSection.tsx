@@ -37,7 +37,7 @@ const projects: Project[] = [
     tag: "MCP Server",
     status: "Live",
     description:
-      "A remote MCP server that connects any MCP-compatible AI directly to a developer's VS Code workspace. Your AI reads files, writes code, searches your codebase, runs terminal commands, and pushes to GitHub — all from the chat window. No copy-pasting. No tab switching.",
+      "A remote MCP server that connects any MCP-compatible AI directly to a developer's VS Code workspace. Your AI reads files, writes code, searches your codebase, runs terminal commands, and pushes to GitHub, all from the chat window. No copy-pasting. No tab switching.",
     stack: ["TypeScript", "Node.js", "Socket.io", "VS Code Extension", "Neon PostgreSQL"],
     links: {
       github: "https://github.com/Oko300/FlowDev",
@@ -58,7 +58,7 @@ const projects: Project[] = [
           { number: "02", text: "Install the FlowDev MCP extension from the VS Code Marketplace (search \"FlowDev MCP\" or open marketplace.visualstudio.com/items?itemName=successO.flowdevmcp)." },
           { number: "03", text: "In VS Code, open the FlowDev sidebar (⚡ icon), paste your token, and click Connect." },
           { number: "04", text: "Add the MCP URL (https://flowdev.onrender.com/mcp?token=YOUR_TOKEN) as a custom connector in Claude, Cursor, Windsurf, or any MCP-compatible AI." },
-          { number: "05", text: "Start chatting — your AI can now read files, write code, run terminal commands, and push to GitHub directly from the conversation. Code never leaves your machine." },
+          { number: "05", text: "Start chatting. Your AI can now read files, write code, run terminal commands, and push to GitHub directly from the conversation. Code never leaves your machine." },
         ],
       },
       {
@@ -72,7 +72,7 @@ const projects: Project[] = [
           "Get the full project structure at a glance",
           "Find-and-replace across files",
           "Works with Claude, Cursor, and any MCP-compatible AI",
-          "Persistent WebSocket — no polling, no latency",
+          "Persistent WebSocket with no polling or added latency",
         ],
       },
       {
@@ -104,7 +104,7 @@ const projects: Project[] = [
         type: "text",
         heading: "What is RiskLens MCP?",
         content:
-          "RiskLens MCP is a Model Context Protocol server that gives AI assistants the ability to perform real-time risk analysis on US public companies. It connects directly to the SEC's EDGAR database, pulls live regulatory filings, and returns a structured risk assessment — all from a single AI tool call.",
+          "RiskLens MCP is a Model Context Protocol server that gives AI assistants the ability to perform real-time risk analysis on US public companies. It connects directly to the SEC's EDGAR database, pulls live regulatory filings, and returns a structured risk assessment, all from a single AI tool call.",
       },
       {
         type: "features",
@@ -116,7 +116,7 @@ const projects: Project[] = [
           "Clustering pattern detection across multiple filings",
           "Plain-language explanation attached to every scored assessment",
           "Redis caching to avoid redundant SEC calls",
-          "Rate-limited SEC API calls — EDGAR-compliant",
+          "Rate-limited SEC API calls, fully EDGAR-compliant",
           "Designed for concurrent users without request collision",
         ],
       },
@@ -130,7 +130,7 @@ const projects: Project[] = [
         type: "text",
         heading: "Technical stack",
         content:
-          "Built with Python and FastMCP. SEC EDGAR data is fetched and parsed with BeautifulSoup. Redis is used for caching recent results to reduce latency and respect EDGAR rate limits. The server is stateless — each tool call is independent.",
+          "Built with Python and FastMCP. SEC EDGAR data is fetched and parsed with BeautifulSoup. Redis is used for caching recent results to reduce latency and respect EDGAR rate limits. The server is stateless. Each tool call is independent.",
       },
       {
         type: "cta",
@@ -145,7 +145,7 @@ const projects: Project[] = [
     tag: "Full-stack App",
     status: "Live",
     description:
-      "Free video downloader that supports TikTok, Instagram, Twitter, Facebook, Vimeo and 1000+ other platforms. Paste a link, choose format and quality, download instantly — no watermark, no signup required.",
+      "Free video downloader that supports TikTok, Instagram, Twitter, Facebook, Vimeo and 1000+ other platforms. Paste a link, choose format and quality, Download instantly. No watermark, no signup required.",
     stack: ["TypeScript", "Next.js", "FastAPI", "Python", "yt-dlp", "ffmpeg", "Tailwind CSS"],
     links: {
       github: "https://github.com/Oko300/ClipNest",
@@ -156,7 +156,7 @@ const projects: Project[] = [
         type: "text",
         heading: "What is ClipNest?",
         content:
-          "ClipNest is a free, open-access web-based video downloader. It lets anyone download videos from TikTok, Instagram, Twitter (X), Facebook, Vimeo, and over 1000 other platforms — directly in the browser. No account required, no watermark added, no ads. Available at clip-nest-ten.vercel.app and installable as a Progressive Web App (PWA) on Android and iOS.",
+          "ClipNest is a free, open-access web-based video downloader. It lets anyone download videos from TikTok, Instagram, Twitter (X), Facebook, Vimeo, and over 1000 other platforms, directly in the browser. No account required, no watermark added, no ads. Available at clip-nest-ten.vercel.app and installable as a Progressive Web App (PWA) on Android and iOS.",
       },
       {
         type: "steps",
@@ -165,7 +165,7 @@ const projects: Project[] = [
           { number: "01", text: "Paste any video link from a supported platform into the input field." },
           { number: "02", text: "ClipNest fetches the video metadata and shows available quality options (360p, 480p, 720p, 1080p) and format options (MP4 video or MP3/M4A/WAV audio)." },
           { number: "03", text: "Select your preferred quality and format, then click Download. A real-time progress bar shows the download status." },
-          { number: "04", text: "The file is saved directly to your device. No watermark is added. Files are held temporarily — up to 2 days — so an interrupted download can be resumed, then auto-deleted." },
+          { number: "04", text: "The file is saved directly to your device. No watermark is added. Files are held temporarily (up to 2 days) so an interrupted download can be resumed, then auto-deleted." },
         ],
       },
       {
@@ -175,10 +175,10 @@ const projects: Project[] = [
           "Supports TikTok, Instagram, Twitter/X, Facebook, Vimeo and 1000+ platforms",
           "Download in multiple video qualities: 360p, 480p, 720p, 1080p",
           "Audio-only download in MP3, M4A, or WAV format",
-          "Clip cutter — download only a specific portion of a video (start/end time)",
+          "Clip cutter: download only a specific portion of a video by start and end time",
           "No watermark on downloaded files",
           "No account or signup required",
-          "No ads — completely free",
+          "No ads. Completely free.",
           "Real-time download progress bar via Server-Sent Events",
           "Metadata stripped from downloaded files for privacy",
           "Installable as a mobile app (PWA) on Android and iOS",
@@ -198,7 +198,7 @@ const projects: Project[] = [
         type: "text",
         heading: "Privacy",
         content:
-          "ClipNest does not store any downloaded videos long-term. Files are processed on the server and kept only temporarily — up to 2 days — for resume purposes, then automatically deleted. ClipNest does not collect personal data, does not require login, and does not track individual user downloads. IP addresses are hidden from server logs.",
+          "ClipNest does not store any downloaded videos long-term. Files are processed on the server and kept only temporarily (up to 2 days) for resume purposes, then automatically deleted. ClipNest does not collect personal data, does not require login, and does not track individual user downloads. IP addresses are hidden from server logs.",
       },
       {
         type: "text",
@@ -210,13 +210,13 @@ const projects: Project[] = [
         type: "faq",
         heading: "Frequently asked questions",
         faqs: [
-          { q: "Is ClipNest free?", a: "Yes. Completely free — no paid plans, no premium features, no hidden charges." },
+          { q: "Is ClipNest free?", a: "Yes. Completely free. No paid plans, no premium features, no hidden charges." },
           { q: "Do I need an account?", a: "No. ClipNest requires no signup, no login, and no personal information of any kind." },
           { q: "Will the downloaded video have a watermark?", a: "No. ClipNest downloads the original video file with no watermark added." },
           { q: "Does ClipNest work on mobile?", a: "Yes. It works on all modern mobile browsers and can be installed as a PWA on Android and iOS for a native app-like experience." },
           { q: "Why is YouTube not supported?", a: "YouTube actively blocks server-based downloading tools. ClipNest focuses on platforms where reliable downloading is technically possible." },
           { q: "How do I download audio only?", a: "After pasting a link, select Audio only (MP3), M4A, or WAV from the format options before clicking Download." },
-          { q: "Can I download just a portion of a video?", a: "Yes. Use the Clip Cutter feature — after fetching a video, set a start time and end time to extract exactly the portion you want." },
+          { q: "Can I download just a portion of a video?", a: "Yes. Use the Clip Cutter feature: after fetching a video, set a start time and end time to extract exactly the portion you want." },
         ],
       },
       {
@@ -379,7 +379,7 @@ export default function ProjectsSection() {
           Tools that actually ship
         </h2>
         <p className="max-w-2xl text-muted mb-12">
-          MCP servers and applications I've built — each one started as an idea and ended as a
+          MCP servers and applications I've built. Each one started as an idea and shipped as a
           working, deployed product. Click any project to read the full details.
         </p>
 
