@@ -4,59 +4,12 @@ import {
   Linkedin,
   Mail,
   Twitter,
-  ExternalLink,
-  ArrowUpRight,
   Code2,
-  Database,
   Bot,
   Layers,
-  Users,
   Sparkles,
 } from "lucide-react";
-
-const projects = [
-  {
-    title: "FlowDev",
-    tag: "MCP Server",
-    description:
-      "A remote MCP server that connects any MCP-compatible AI directly to a developer's VS Code workspace. Your AI reads files, writes code, searches your codebase, runs terminal commands, and pushes to GitHub — all from the chat window. No copy-pasting. No tab switching.",
-    howItWorks:
-      "The MCP server acts as a relay. Your AI sends tool calls to FlowDev, which forwards them to a VS Code extension via persistent WebSocket. The extension executes locally and returns results in real time. Your code never leaves your machine.",
-    stack: ["TypeScript", "Node.js", "Socket.io", "VS Code Extension", "Neon PostgreSQL"],
-    links: {
-      github: "https://github.com/Oko300/FlowDev",
-      live: "https://flowdev.onrender.com",
-    },
-    status: "Live",
-  },
-  {
-    title: "RiskLens MCP",
-    tag: "MCP Server",
-    description:
-      "Risk analysis for US public companies using live SEC EDGAR data. Pulls Form 8-K filings and Form 4 insider transactions, classifies them against a built-in risk taxonomy, detects clustering patterns, and returns a scored risk assessment with a plain-language explanation.",
-    howItWorks:
-      "Two focused tools: analyze_8k_events (material events, restatements, leadership changes, impairments) and analyze_insider_activity (clustered selling vs routine activity). Backed by Redis caching, rate-limited SEC calls, and designed for concurrent users.",
-    stack: ["Python", "FastMCP", "Redis", "SEC EDGAR", "BeautifulSoup"],
-    links: {
-      github: "https://github.com/Oko300/risklens-mcp",
-    },
-    status: "Live",
-  },
-  {
-    title: "ClipNest",
-    tag: "Full-stack App",
-    description:
-      "Free video downloader that supports TikTok, Instagram, Twitter, Facebook, Vimeo and 1000+ other platforms. Paste a link, choose format and quality, download instantly — no watermark, no signup required.",
-    howItWorks:
-      "Next.js frontend with a clean queue-based interface. Paste multiple links, select format (video or audio), and download. Built for speed and simplicity.",
-    stack: ["TypeScript", "Next.js", "Tailwind CSS"],
-    links: {
-      github: "https://github.com/Oko300/ClipNest",
-      live: "https://clip-nest-ten.vercel.app",
-    },
-    status: "Live",
-  },
-];
+import ProjectsSection from "@/components/ProjectsSection";
 
 const skills = [
   {
@@ -109,7 +62,7 @@ export default function Home() {
             <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
               <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-border ring-2 ring-accent/20 md:h-36 md:w-36">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo2.jpg"
                   alt="success"
                   fill
                   className="object-cover"
@@ -171,9 +124,9 @@ export default function Home() {
             <div className="grid gap-12 md:grid-cols-2">
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
-                  I'm a 200-level B.Sc Statistics student at Federal University Wukari, Nigeria.
-                  I combine a statistics foundation with real software development — which means
-                  I don't just write code, I understand the data behind it.
+                  I'm a Statistics student who combines a solid data foundation with real
+                  software development — which means I don't just write code, I understand
+                  the data behind it.
                 </p>
                 <p>
                   Most of what I build sits at that intersection: tools that pull live data,
@@ -207,83 +160,7 @@ export default function Home() {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="border-t border-border/50 py-24 px-6 bg-surface/30">
-          <div className="mx-auto max-w-5xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-accent mb-4">Selected Work</p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">
-              Tools that actually ship
-            </h2>
-            <p className="max-w-2xl text-muted mb-12">
-              A selection of MCP servers and applications I've built. Each one started as an idea
-              and ended as a working, deployed product.
-            </p>
-
-            <div className="space-y-8">
-              {projects.map((project) => (
-                <article
-                  key={project.title}
-                  className="group rounded-2xl border border-border bg-surface p-6 md:p-8 hover:border-accent/30 transition-colors"
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-                        <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent">
-                          {project.tag}
-                        </span>
-                      </div>
-                      <span className="text-xs text-muted-foreground">{project.status}</span>
-                    </div>
-                    <div className="flex gap-2">
-                      {project.links.github && (
-                        <a
-                          href={project.links.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-lg border border-border p-2 text-muted hover:text-foreground hover:border-accent/50 transition-colors"
-                          aria-label="GitHub"
-                        >
-                          <Github className="h-4 w-4" />
-                        </a>
-                      )}
-                      {project.links.live && (
-                        <a
-                          href={project.links.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-lg border border-border p-2 text-muted hover:text-foreground hover:border-accent/50 transition-colors"
-                          aria-label="Live demo"
-                        >
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-
-                  <p className="text-muted leading-relaxed mb-4">{project.description}</p>
-
-                  <div className="rounded-xl bg-background/50 border border-border/50 p-4 mb-5">
-                    <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-2">
-                      How it works
-                    </p>
-                    <p className="text-sm text-muted leading-relaxed">{project.howItWorks}</p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-md bg-background border border-border px-2.5 py-1 text-xs text-muted"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProjectsSection />
 
         {/* How I Work */}
         <section className="border-t border-border/50 py-24 px-6">
@@ -425,9 +302,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-border/50 py-8 px-6">
-        <div className="mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <div className="mx-auto max-w-5xl flex items-center justify-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} success. Built with Next.js.</p>
-          <p>From Cross River State · Schooling in Taraba State, Nigeria</p>
         </div>
       </footer>
     </div>
